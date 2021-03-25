@@ -1,0 +1,120 @@
+Latihan 1
+public class BelajarArray {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int[] myArray;
+        
+        myArray = new int[20];
+        
+        char[] myArray2 = new char[100];
+        
+        double[] myArray3 = new double[5];
+        
+        System.out.println(myArray.length);
+    }
+    
+}
+
+Latihan 2
+package belajararray;
+
+/**
+ *
+ * @author win10
+ */
+public class ArrayEx1 {
+    public static void main(String args[]) {
+        
+       int[] primeNum = new int[20]; //tipe data tidk sama
+        int[] even = new int[5]; //kurang kurung siku
+        
+        int[]score = new int[9]; //deklarasi array
+        byte[] values = new byte[10];
+        values[0] = 1;
+        values[1] = 1;
+        values[2] = 1;
+        values[3] = 1;
+        values[4] = 1;
+        values[5] = 1;
+        values[6] = 1;
+        values[7] = 1;
+        values[8] = 1;
+        values[9] = 1;
+        
+        long[] primes = new long[20];
+        primes[0] = 2;
+        primes[1] = 3;
+        long[] primes2 = primes;
+        System.out.println(primes2[0]);
+        primes2[0] = 5;
+        System.out.println(primes[0]);
+
+    }
+    
+}
+
+Latihan 3
+package belajararray;
+import java.util.Scanner;
+/**
+ *
+ * @author win10
+ */
+public class ComputeAvg {
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int[] score = new int[5];
+        
+       //int[] skor = {100, 100, 100, 100, 100};
+       System.out.println("masukkan angka");
+       for(int i = 0; i < score.length; i++){
+           score[i] = input.nextInt();
+       }
+        System.out.println();
+        int total = 0;
+        for(int j = 0; j < score.length; j++){
+            System.out.println(j);
+            total = total + score[j];
+        }
+        
+        System.out.println("Total: ");
+        System.out.println(total);
+        
+        double avg = (double) total / (double) score.length;
+        
+        System.out.println("Rata-rata dari element diatas adalah: " +avg);   
+}
+
+}
+
+
+Latihan 4
+package belajararray;
+
+/**
+ *
+ * @author win10
+ */
+public class ArrayEx2 {
+       public static void main(String args[]) {
+        String[] browsers = new String[4];
+        browsers[0] = "explorer";
+        browsers[1] = "chrome";
+        browsers[2] = "opera";
+        browsers[3] = "firefox";//eror (mencoba mengakses indeks yang diluar array tersebut)
+        System.out.print("size of array: " + browsers.length);
+        
+        for(String i : browsers){//gunanya pengulangan elemen
+            //i = variabel
+            //string = tipe data
+            System.out.println(i);
+        }
+        
+    }
+    
+
